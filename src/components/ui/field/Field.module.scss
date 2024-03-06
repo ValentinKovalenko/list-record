@@ -1,0 +1,9 @@
+.field{
+  @apply mt-12 w-full;
+  input{
+    @apply pl-3 w-2/3 border-2 outline-none bg-transparent h-10 rounded-xl
+  }
+  .error{
+    @apply h-6 text-red-600 text-sm;
+  }
+}

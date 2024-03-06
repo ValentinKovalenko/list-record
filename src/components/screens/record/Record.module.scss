@@ -1,0 +1,6 @@
+.container{
+  @apply flex justify-between items-center px-4 border-2 h-10 my-2 rounded-xl;
+  p{
+    @apply font-bold hover:cursor-pointer;
+  }
+}

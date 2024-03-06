@@ -1,0 +1,9 @@
+.counter{
+  @apply flex justify-end me-5;
+  span{
+   padding: 3px;
+    .number{
+      font-weight: bold;
+    }
+  }
+}
