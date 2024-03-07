@@ -33,7 +33,7 @@
     "extends": [
       "react-app",
       "react-app/jest",
-      "@wemake-services/stylelint-config-scss",
+      "@wemake-services/javascript",
       "@wemake-services/typescript/recommended"
     ]
   },
@@ -51,8 +51,8 @@
   },
   "devDependencies": {
     "@types/uuid": "^9.0.8",
+    "@wemake-services/eslint-config-javascript": "^2.1.1",
     "@wemake-services/eslint-config-typescript": "^3.1.1",
-    "@wemake-services/stylelint-config-scss": "^4.0.1",
     "tailwindcss": "^3.4.1"
   }
 }
