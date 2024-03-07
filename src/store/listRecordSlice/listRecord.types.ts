@@ -1,10 +1,10 @@
 export interface Record {
-    id: string;
-    title: string;
-    status: string;
+  id: string
+  title: string
+  status: string
 }
 
 export interface RecordState {
-    records: Record[];
-    filterRecord: Record[]
+  records: Record[]
+  filterRecord: Record[]
 }
