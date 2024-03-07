@@ -1,10 +1,14 @@
 import { InputHTMLAttributes } from 'react'
-import { RegisterOptions, UseFormRegisterReturn } from 'react-hook-form'
+import {
+  FieldError,
+  RegisterOptions,
+  UseFormRegisterReturn,
+} from 'react-hook-form'
 
 export interface IFieldProps {
   name: string
   placeholder: string
-  errors?: any
+  errors?: FieldError
   register: (name: string, options?: RegisterOptions) => UseFormRegisterReturn
   maxLength: number
   required: boolean

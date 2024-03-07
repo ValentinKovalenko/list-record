@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { RecordState, Record } from './listRecord.types'
+import { RecordState, Record } from './list-record.types'
 
 const initialState: RecordState = {
   'records': [],
@@ -13,16 +13,27 @@ const recordSlice = createSlice({
     'addRecord': (state, action: PayloadAction<Record>) => {
       state.records.push(action.payload)
     },
-    'updateRecord': (state, action: PayloadAction<{ id: string, status: string }>) => {
+    'updateRecord': (
+      state,
+      action:
+      PayloadAction<{ id: string, status: string }>,
+    ) => {
       const { id, status } = action.payload
-      const taskToUpdate = state.records.find((record) => record.id === id)
+      const taskToUpdate =
+          state.records.find((record) => record.id === id)
       if (taskToUpdate) {
         taskToUpdate.status = status
       }
     },
-    'filterRecord': (state, action: PayloadAction<{ status: string }>) => {
+    'filterRecord': (
+      state,
+      action: PayloadAction<{ status: string }>,
+    ) => {
       const { status } = action.payload
-      state.filterRecord = status === 'All' ? state.records : state.records.filter((item) => item.status === status)
+      state.filterRecord = status ===
+      'All' ? state.records : state.records.filter((record) => {
+          return record.status === status
+        })
     },
   },
 })

@@ -1,5 +1,5 @@
 import { setupListeners } from '@reduxjs/toolkit/query'
-import recordSlice from './listRecordSlice/listRecordSlice'
+import recordSlice from './listRecordSlice/list-record-slice'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import {
   persistStore,
@@ -22,7 +22,7 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
-export const store = configureStore({
+const store = configureStore({
   'reducer': persistedReducer,
   'middleware': (getDefaultMiddleware) => getDefaultMiddleware({
     'serializableCheck': {
@@ -36,3 +36,4 @@ setupListeners(store.dispatch)
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
 export const persistor = persistStore(store)
+export default store
